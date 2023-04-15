@@ -1,0 +1,105 @@
+* { box-sizing: border-box; }
+
+body {
+   font-family: sans-serif;
+   background-color: black;
+ }
+
+.buttonDiv{
+
+ display: flex;
+ justify-content: center;
+ margin: 50px;
+ font-size: xx-large;
+
+}
+#throw{
+
+  cursor: pointer;
+  border-radius: 25px;
+  height: 50px;
+  width: 150px;
+  background-image: linear-gradient(rgb(123, 22, 109), rgb(235, 127, 254));
+  box-shadow: 10x 1px 1px 1px;
+
+  font-weight: bold;
+  font-size: 20px;
+}
+#throw:hover {
+  background-color: yellow;
+}
+
+/* .hatel{
+  font-size: 20px;
+} */
+
+.divCube{
+  display: flex;
+  justify-content: center;
+
+}
+
+.scene {
+  /* display: flex;
+  justify-content: center; */
+
+  width: 200px;
+  height: 200px;
+  margin: 80px;
+  perspective: 400px;
+}
+
+.cube {
+  /* display: flex;
+  justify-content: center; */
+
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-100px);
+  transition: transform 1s;
+}
+
+.cube.show-front  { transform: translateZ(-100px) rotateY(   0deg); }
+.cube.show-right  { transform: translateZ(-100px) rotateY( -90deg); }
+.cube.show-back   { transform: translateZ(-100px) rotateY(-180deg); }
+.cube.show-left   { transform: translateZ(-100px) rotateY(  90deg); }
+.cube.show-top    { transform: translateZ(-100px) rotateX( -90deg); }
+.cube.show-bottom { transform: translateZ(-100px) rotateX(  90deg); }
+
+.cube.show-fullSpin{transform: translateZ(-100px) rotateX(  360deg);}
+
+.cube__face {
+
+  /* display: flex;
+  justify-content: center; */
+
+  align-items: center;
+
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+  line-height: 200px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.cube__face--front  { background-color: rgb(217, 91, 248); }
+.cube__face--right  { background-color: rgb(58, 77, 245); }
+.cube__face--back   { background-color: rgb(243, 67, 96); }
+.cube__face--left   { background-color: rgb(80, 234, 240); }
+.cube__face--top    { background-color: rgb(140, 250, 112); }
+.cube__face--bottom { background-color: rgb(245, 179, 81); }
+
+.cube__face--front  { transform: rotateY(  0deg) translateZ(100px); }
+.cube__face--right  { transform: rotateY( 90deg) translateZ(100px); }
+.cube__face--back   { transform: rotateY(180deg) translateZ(100px); }
+.cube__face--left   { transform: rotateY(-90deg) translateZ(100px); }
+.cube__face--top    { transform: rotateX( 90deg) translateZ(100px); }
+.cube__face--bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+label { margin-right: 10px; }
